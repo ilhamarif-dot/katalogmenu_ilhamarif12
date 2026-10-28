@@ -3,183 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JagatSaji - Kuliner Indonesia</title>
+
+    <title>JagatSaji - Katalog Menu</title>
 
     <style>
-        /* =========================
-           RESET
-        ========================= */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            text-decoration: none;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, sans-serif;
             background: white;
-            color: #222;
+            color: #444;
         }
 
-        .wrapper {
-            width: 90%;
-            max-width: 1001px;
-            margin: auto;
-        }
+        /* ================= NAVBAR ================= */
 
-
-        /* =========================
-           NAVBAR
-        ========================= */
         nav {
             width: 100%;
-            background-color: rgb(5, 5, 0);
-            position: sticky;
-            position: -webkit-sticky;
-            top: 0;
-            z-index: 100;
-        }
+            height: 55px;
+            background: #050505;
 
-        .nav-wrapper {
-            width: 90%;
-            max-width: 1001px;
-            min-height: 80px;
-            margin: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            padding: 0 45px;
         }
 
-        .logo a {
-            font-size: 30px;
-            font-family: Cambria, Cochin, Georgia,
-                Times, "Times New Roman", serif;
-            font-weight: 800;
-            color: #f8f6f5;
-        }
-
-        .menu ul {
-            list-style: none;
-            display: flex;
-            align-items: center;
-        }
-
-        .menu ul li a {
-            color: rgb(244, 242, 242);
+        .logo {
+            color: white;
+            font-family: Georgia, serif;
+            font-size: 18px;
             font-weight: bold;
-            text-align: center;
-            padding: 0 12px;
-            line-height: 80px;
         }
 
-        .menu ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .order {
-            background: #f0960e;
-            border-radius: 20px;
-            padding: 10px 15px !important;
-            color: aliceblue !important;
-            cursor: pointer;
-        }
-
-
-        /* =========================
-           BANNER
-        ========================= */
-        .banner {
+        .nav-menu {
             display: flex;
             align-items: center;
-            gap: 40px;
-            padding: 50px 0;
+            gap: 22px;
         }
 
-        .kolom {
-            flex: 1;
-            text-align: left;
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 11px;
         }
 
-        .kolom h2 {
-            font-family: "Comic Sans MS", cursive;
-            font-weight: 700;
-            font-size: 42px;
-            margin-bottom: 20px;
-            color: #e58d42;
-            line-height: 50px;
+        .nav-menu a:hover {
+            color: #f3a51b;
         }
 
-        .deskripsi {
-            font-size: 16px;
-            font-family: "Times New Roman", Times, serif;
-            color: #555;
-            line-height: 25px;
+        .pesan-nav {
+            background: #f3a51b;
+            padding: 9px 15px;
+            border-radius: 20px;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            width: 90%;
+            max-width: 1000px;
+
+            margin: 45px auto 35px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 45px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            color: #d99d67;
+
+            font-family: Georgia, serif;
+
+            font-size: 31px;
+
+            line-height: 1.2;
+
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-family: Georgia, serif;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
             text-align: justify;
+
             margin-bottom: 10px;
         }
 
-        .gambar {
-            width: 480px;
-            height: 330px;
-            object-fit: cover;
-            border-radius: 24px;
-            box-shadow: 0 10px 20px rgba(246, 182, 44, 0.7);
-            transition: 0.3s;
-        }
-
-        .gambar:hover {
-            transform: translateY(-5px);
-        }
-
-        .reservasi {
+        .btn {
             display: inline-block;
-            background: #f0960e;
-            border-radius: 20px;
-            margin-top: 20px;
-            padding: 10px 15px;
+
+            margin-top: 8px;
+
+            background: #f3a51b;
+
             color: white;
+
+            border: none;
+
+            padding: 9px 16px;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+
             cursor: pointer;
-            font-weight: bold;
+
+            text-decoration: none;
         }
 
-        .reservasi:hover {
-            background: #d77e00;
+        .btn:hover {
+            background: #d88d00;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 230px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
 
-        /* =========================
-           KATALOG MENU
-        ========================= */
-        .katalog {
-            border-top: 1px solid #aaa;
-            padding: 25px 0 60px;
+        /* ================= GARIS ================= */
+
+        .garis {
+            width: 90%;
+            max-width: 1000px;
+
+            margin: 0 auto 20px;
+
+            border-top: 2px solid #eeeeee;
         }
 
-        .judul-menu {
+
+        /* ================= MENU ================= */
+
+        .menu {
+            width: 90%;
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding-bottom: 40px;
+        }
+
+        .menu h2 {
             text-align: center;
-            font-family: "Comic Sans MS", cursive;
-            color: #e5a05d;
-            font-size: 32px;
-            margin-bottom: 25px;
+
+            color: #d8a16d;
+
+            font-family: Georgia, serif;
+
+            font-style: italic;
+
+            font-size: 24px;
+
+            margin-bottom: 20px;
         }
 
         .menu-container {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+
+            gap: 15px;
         }
 
+
+        /* ================= CARD ================= */
+
         .card {
-            background: #f3d39d;
-            padding: 12px;
+            background: #f4d39a;
+
+            padding-bottom: 15px;
+
             border-radius: 5px;
-            text-align: center;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+
+            overflow: hidden;
+
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+
             transition: 0.3s;
         }
 
@@ -189,320 +208,420 @@
 
         .card img {
             width: 100%;
-            height: 150px;
+            height: 145px;
+
             object-fit: cover;
-            border-radius: 3px;
+
+            display: block;
         }
 
         .card h3 {
-            font-size: 18px;
-            margin: 12px 0 8px;
+            text-align: center;
+
+            font-family: Georgia, serif;
+
+            font-size: 15px;
+
+            color: #444;
+
+            margin: 10px 0 7px;
         }
 
         .card p {
-            font-size: 13px;
-            line-height: 19px;
-            color: #555;
+            font-family: Georgia, serif;
+
+            font-size: 10px;
+
+            line-height: 1.5;
+
+            text-align: center;
+
+            padding: 0 15px;
+
+            color: #666;
         }
 
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* ================= FOOTER ================= */
+
         footer {
             background: #151515;
+
             color: white;
-            padding: 40px 0 20px;
+
+            margin-top: 5px;
         }
 
         .footer-container {
             width: 90%;
-            max-width: 1001px;
+            max-width: 1000px;
+
             margin: auto;
+
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+
+            gap: 30px;
+
+            padding: 28px 0 22px;
         }
 
         .footer-box h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: white;
+            font-family: Georgia, serif;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
         }
 
         .footer-box p {
-            font-size: 13px;
-            line-height: 23px;
+            font-size: 9px;
+
+            line-height: 1.8;
+
             color: #ddd;
         }
 
         .social {
-            margin-top: 10px;
+            display: flex;
+
+            gap: 7px;
+
+            margin-top: 8px;
         }
 
         .social a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 25px;
-            height: 25px;
-            margin-right: 5px;
+            width: 22px;
+            height: 22px;
+
+            background: #333;
+
             border-radius: 50%;
-            background: #444;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
             color: white;
-            font-size: 12px;
+
+            text-decoration: none;
+
+            font-size: 10px;
         }
 
         .copyright {
-            border-top: 1px solid #444;
-            margin-top: 30px;
-            padding-top: 20px;
+            border-top: 1px solid #333;
+
             text-align: center;
-            color: #ccc;
-            font-size: 13px;
+
+            padding: 14px;
+
+            font-size: 9px;
+
+            color: #aaa;
         }
 
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
-        @media screen and (max-width: 768px) {
+        /* ================= RESPONSIVE ================= */
 
-            .nav-wrapper {
-                width: 95%;
-                min-height: 65px;
-            }
+        @media (max-width: 700px) {
 
-            .logo a {
-                font-size: 21px;
-            }
+            nav {
+                padding: 12px 20px;
 
-            .menu ul li a {
-                font-size: 10px;
-                padding: 0 5px;
-                line-height: 65px;
-            }
-
-            .banner {
-                flex-direction: column;
-                padding: 35px 0;
-            }
-
-            .kolom {
-                width: 100%;
-            }
-
-            .kolom h2 {
-                font-size: 32px;
-                line-height: 40px;
-            }
-
-            .gambar {
-                width: 100%;
                 height: auto;
+
+                flex-direction: column;
+
+                gap: 12px;
             }
+
+            .nav-menu {
+                gap: 12px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+
+                margin-top: 30px;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-image img {
+                height: 220px;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .menu-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 450px) {
 
             .menu-container {
                 grid-template-columns: 1fr;
             }
 
-            .footer-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 25px;
+            .card img {
+                height: 180px;
             }
         }
     </style>
 </head>
 
+
 <body>
 
 
-    <!-- =========================
-         NAVBAR
-    ========================= -->
+    <!-- ================= NAVBAR ================= -->
+
     <nav>
-        <div class="nav-wrapper">
 
-            <div class="logo">
-                <a href="#">JagatSaji</a>
-            </div>
+        <div class="logo">
+            JagatSaji
+        </div>
 
-            <div class="menu">
-                <ul>
+        <div class="nav-menu">
 
-                    <li>
-                        <a href="#beranda">Beranda</a>
-                    </li>
+            <a href="#beranda">
+                Beranda
+            </a>
 
-                    <li>
-                        <a href="#menu">Menu</a>
-                    </li>
+            <a href="#menu">
+                Menu
+            </a>
 
-                    <li>
-                        <a href="#rekanan">Rekanan</a>
-                    </li>
+            <a href="#rekanan">
+                Rekanan
+            </a>
 
-                    <li>
-                        <a href="#kontak">Hubungi Kami</a>
-                    </li>
+            <a href="#kontak">
+                Hubungi Kami
+            </a>
 
-                    <li>
-                        <a href="#menu" class="order">
-                            Pesan Disini
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
+            <a href="#menu" class="pesan-nav">
+                Pesan Online
+            </a>
 
         </div>
+
     </nav>
 
 
-    <!-- =========================
-         BANNER
-    ========================= -->
-    <section class="wrapper banner" id="beranda">
 
-        <div class="kolom">
+    <!-- ================= HERO ================= -->
 
-            <h2>
-                Sajian Masakan Indonesia
-            </h2>
+    <section class="hero" id="beranda">
 
-            <p class="deskripsi">
-                Nikmati kelezatan resep warisan leluhur yang diolah
-                dari bumbu rempah pilihan. Dari Sabang sampai Merauke,
-                kami menghadirkan kehangatan tradisi Indonesia langsung
-                ke meja makan Anda.
+        <div class="hero-text">
+
+            <h1>
+                Sajian Masakan<br>
+                Indonesia
+            </h1>
+
+            <p>
+                Nikmati kelezatan resep warisan leluhur
+                yang diolah dari berbagai rempah pilihan.
+                Dari Sabang sampai Merauke, kami menghadirkan
+                kehangatan tradisi Indonesia langsung ke meja
+                makan Anda.
             </p>
 
-            <p class="deskripsi">
-                Jelajahi rasa kuliner Nusantara dengan kesegaran bahan
-                dan kehangatan tradisi dalam setiap sajian. Pesan
-                sekarang dan nikmati kelezatan masakan khas Indonesia!
+            <p>
+                Jelajahi rasa kuliner Nusantara dengan
+                kesegaran bahan dan kehangatan tradisi
+                dalam setiap sajian.
             </p>
 
-            <a href="#menu" class="reservasi">
+            <a href="#menu" class="btn">
                 Pesan Sekarang
             </a>
 
         </div>
 
-        <img
-            src="nusantara.avif"
-            class="gambar"
-            alt="Masakan Indonesia"
-        >
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80"
+                alt="Masakan Indonesia"
+            >
+
+        </div>
 
     </section>
 
 
-    <!-- =========================
-         KATALOG MENU
-    ========================= -->
-    <section class="wrapper katalog" id="menu">
 
-        <h1 class="judul-menu">
+    <!-- ================= GARIS ================= -->
+
+    <div class="garis"></div>
+
+
+
+    <!-- ================= MENU ================= -->
+
+    <section class="menu" id="menu">
+
+        <h2>
             Pilihan Menu
-        </h1>
+        </h2>
+
 
         <div class="menu-container">
 
-            <!-- 1 -->
+
+            <!-- 1. NASI KUNING -->
+
             <div class="card">
+
                 <img
-                    src="nusantara.avif"
+                    src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=600&q=80"
                     alt="Nasi Kuning"
                 >
 
-                <h3>Nasi Kuning</h3>
+                <h3>
+                    Nasi Kuning
+                </h3>
 
                 <p>
-                    Nasi kuning dengan rasa gurih yang
-                    dilengkapi berbagai lauk dan pelengkap.
+                    Memiliki cita rasa yang gurih
+                    dengan berbagai lauk dan pelengkap.
                 </p>
+
             </div>
 
 
-            <!-- 2 -->
+
+            <!-- 2. GADO-GADO -->
+
             <div class="card">
+
                 <img
-                    src="gado-gado.jpg"
+                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"
                     alt="Gado-gado"
                 >
 
-                <h3>Gado-gado</h3>
+                <h3>
+                    Gado-gado
+                </h3>
 
                 <p>
-                    Makanan khas Indonesia dengan sayuran
-                    segar dan bumbu kacang yang lezat.
+                    Salah satu makanan khas Indonesia
+                    yang terdiri dari sayuran segar.
                 </p>
+
             </div>
 
 
-            <!-- 3 -->
+
+            <!-- 3. NASI UDUK -->
+
             <div class="card">
+
                 <img
-                    src="nusantara.avif"
+                    src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80"
                     alt="Nasi Uduk"
                 >
 
-                <h3>Nasi Uduk</h3>
+                <h3>
+                    Nasi Uduk
+                </h3>
 
                 <p>
-                    Nasi yang dimasak menggunakan santan
-                    sehingga memiliki rasa gurih dan harum.
+                    Nasi dimasak menggunakan santan
+                    sehingga memiliki rasa gurih.
                 </p>
+
             </div>
 
 
-            <!-- 4 -->
+
+            <!-- 4. NASI DAUN JERUK -->
+
             <div class="card">
+
                 <img
-                    src="nusantara.avif"
+                    src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80"
                     alt="Nasi Daun Jeruk"
                 >
 
-                <h3>Nasi Daun Jeruk</h3>
+                <h3>
+                    Nasi Daun Jeruk
+                </h3>
 
                 <p>
                     Nasi dengan aroma daun jeruk yang
                     memberikan rasa segar dan harum.
                 </p>
+
             </div>
 
 
-            <!-- 5 -->
+
+            <!-- 5. NASI PECEL -->
+
             <div class="card">
+
                 <img
-                    src="nasi pecel.jpg"
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80"
                     alt="Nasi Pecel"
                 >
 
-                <h3>Nasi Pecel</h3>
+                <h3>
+                    Nasi Pecel
+                </h3>
 
                 <p>
-                    Nasi pecel dengan sayuran segar dan
-                    bumbu kacang khas Nusantara.
+                    Nasi Pecel berupa nasi yang dilengkapi
+                    dengan sayuran serta bumbu kacang.
                 </p>
+
             </div>
 
 
-            <!-- 6 -->
+
+            <!-- 6. RUJAK CINGUR -->
+
             <div class="card">
+
                 <img
-                    src="images/rujak-cingur.jpg"
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80"
                     alt="Rujak Cingur"
                 >
 
-                <h3>Rujak Cingur</h3>
+                <h3>
+                    Rujak Cingur
+                </h3>
 
                 <p>
-                    Makanan khas Jawa Timur dengan sayuran,
-                    buah, dan bumbu petis yang khas.
+                    Rujak Cingur merupakan salah satu
+                    makanan tradisional khas Jawa Timur.
                 </p>
+
             </div>
 
         </div>
@@ -510,21 +629,16 @@
     </section>
 
 
-    <!-- =========================
-         REKANAN
-    ========================= -->
-    <section id="rekanan" style="height: 1px;">
-    </section>
 
+    <!-- ================= FOOTER ================= -->
 
-    <!-- =========================
-         FOOTER / CONTACT US
-    ========================= -->
     <footer id="kontak">
 
         <div class="footer-container">
 
+
             <!-- CONTACT US -->
+
             <div class="footer-box">
 
                 <h3>
@@ -546,8 +660,10 @@
             </div>
 
 
+
             <!-- JAGATSAJI -->
-            <div class="footer-box">
+
+            <div class="footer-box" id="rekanan">
 
                 <h3>
                     JagatSaji
@@ -572,7 +688,9 @@
             </div>
 
 
+
             <!-- OPENING HOURS -->
+
             <div class="footer-box">
 
                 <h3>
@@ -588,7 +706,9 @@
         </div>
 
 
+
         <!-- COPYRIGHT -->
+
         <div class="copyright">
 
             © 2026 All Rights Reserved By rpl_skaneda
